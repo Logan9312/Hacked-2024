@@ -31,8 +31,7 @@
     "start": "expo start --tunnel",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
-    "prettier": "./*.js"
+    "web": "expo start --web"
   },
   "resolutions": {
     "metro": "0.76.0",
@@ -42,10 +41,5 @@
     "metro": "0.76.0",
     "metro-resolver": "0.76.0"
   },
-  "version": "0.0.0",
-  "prettier": {
-    "jsxBracketSameLine": true,
-    "semi": false
-
-  }
+  "version": "0.0.0"
 }

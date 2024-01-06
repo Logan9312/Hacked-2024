@@ -13,10 +13,10 @@ import { useCallback } from "react";
 const Clicks = () => {
   const click = useStore(useCallback((state) => state.click, []));
   const incrementClick = useStore(
-    useCallback((state) => state.incrementClick, [])
+    useCallback((state) => state.incrementClick, []),
   );
   const decrementClick = useStore(
-    useCallback((state) => state.decrementClick, [])
+    useCallback((state) => state.decrementClick, []),
   );
 
   return (
@@ -40,10 +40,7 @@ const Clicks = () => {
           <Text className="text-md">+</Text>
         </TouchableOpacity>
       </View>
-      <Link
-        className="text-center w-48 bg-violet-400 text-md p-2"
-        href="/"
-      >
+      <Link className="text-center w-48 bg-violet-400 text-md p-2" href="/">
         Go to Home Page
       </Link>
     </SafeAreaView>
