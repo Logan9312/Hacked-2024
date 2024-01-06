@@ -42,9 +42,8 @@ const App = () => {
 
         <View className="grid grid-cols-2 gap-4 px-4">
           {dashboardItems.map((item, index) => (
-            <Link href={item.link} asChild>
+            <Link key={index} href={item.link} asChild>
               <TouchableOpacity
-                key={index}
                 className={`${item.color} rounded-lg p-4 flex items-center justify-between flex-1`}>
                 <Ionicons name={item.icon as any} size={24} color="white" />
                 <Text style={{ color: "white", fontWeight: "bold" }}>{item.title}</Text>
