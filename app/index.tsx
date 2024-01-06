@@ -22,7 +22,7 @@ const App = () => {
       title: "Grocery List",
       icon: "cart-outline",
       color: "bg-green-400",
-      link: "/grocery",
+      link: "/groceries",
     },
     {
       title: "Messages",
@@ -36,34 +36,24 @@ const App = () => {
     <SafeAreaView className="flex-1">
       <ScrollView className="bg-gray-100">
         <View className="px-4 py-8">
-          <Text className="text-3xl font-bold text-gray-800">
-            Welcome to Roommates!
-          </Text>
-          <Text className="text-lg text-gray-600 mt-2">
-            Manage your home efficiently
-          </Text>
+          <Text className="text-3xl font-bold text-gray-800">Welcome to Roommates!</Text>
+          <Text className="text-lg text-gray-600 mt-2">Manage your home efficiently</Text>
         </View>
 
         <View className="grid grid-cols-2 gap-4 px-4">
           {dashboardItems.map((item, index) => (
-            <TouchableOpacity
-              key={index}
-              style={{ flex: 1 }}
-              className={`${item.color} rounded-lg p-4 flex items-center justify-between`}
-            >
-              <Link href="/your-desired-path">
+            <Link href={item.link} asChild>
+              <TouchableOpacity
+                key={index}
+                className={`${item.color} rounded-lg p-4 flex items-center justify-between flex-1`}>
                 <Ionicons name={item.icon as any} size={24} color="white" />
-                <Text style={{ color: "white", fontWeight: "bold" }}>
-                  {item.title}
-                </Text>
-              </Link>
-            </TouchableOpacity>
+                <Text style={{ color: "white", fontWeight: "bold" }}>{item.title}</Text>
+              </TouchableOpacity>
+            </Link>
           ))}
         </View>
 
-        <View className="mt-8 px-4">
-          {/* Add more content or features here */}
-        </View>
+        <View className="mt-8 px-4">{/* Add more content or features here */}</View>
       </ScrollView>
     </SafeAreaView>
   );
