@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Text, FlatList, View, TouchableOpacity, StatusBar } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
+import BottomBar from "@lib/bottomBar";
 
 interface Payment {
 	id: number;
@@ -38,9 +39,11 @@ const Payments = () => {
 			<View className="px-4 py-4 bg-blue-500">
 				<View className="flex flex-row justify-between items-center">
 					<Text className="text-xl text-white">Payments:</Text>
-					<TouchableOpacity className="bg-white px-3 py-2 rounded">
-						<Text className="text-blue-500">New Payment</Text>
-					</TouchableOpacity>
+					<Link href="/addItem" asChild>
+						<TouchableOpacity className="bg-white px-3 py-2 rounded">
+							<Text className="text-blue-500">New Payment</Text>
+						</TouchableOpacity>
+					</Link>
 				</View>
 			</View>
 

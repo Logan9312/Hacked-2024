@@ -3,16 +3,6 @@ interface HouseHold {
 	name: string;
 }
 
-interface Task {
-	id: number;
-	household_id: number;
-	name: string;
-	description: string;
-	due_date: string;
-	assigned_to_id: number;
-	completed: boolean;
-}
-
 interface List {
 	id: number;
 	household_id: number;
