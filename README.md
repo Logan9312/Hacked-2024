@@ -3,11 +3,10 @@
 This is an opinionated react-native stack with Typescript, Expo Router, Tailwind(Nativewind) & Zustand
 
 ## 🚀 Quickstart
+First clone this repo, then: 
 
 ```sh
-npx degit aviavinav/chai my-project
-
-cd my-project && yarn install
+yarn install
 
 yarn start
 ```
