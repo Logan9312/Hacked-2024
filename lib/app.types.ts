@@ -3,13 +3,6 @@ interface HouseHold {
 	name: string;
 }
 
-interface List {
-	id: number;
-	household_id: number;
-	name: string;
-	description: string;
-}
-
 interface Message {
 	id: number;
 	household_id: number;

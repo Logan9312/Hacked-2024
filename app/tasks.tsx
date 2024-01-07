@@ -6,11 +6,11 @@ import BottomBar from "@lib/bottomBar";
 
 interface Task {
 	id: number;
-	household_id: number;
+	household: number;
 	name: string;
 	description: string;
 	due_date: string;
-	assigned_to_id: number;
+	assigned_to: number;
 	completed: boolean;
 }
 
@@ -23,6 +23,7 @@ const Payments = () => {
 			try {
 				const response = await fetch("https://hacked-2024-backend-production.up.railway.app/tasks");
 				const data = await response.json();
+				console.log(data);
 				setPayments(data);
 			} catch (error) {
 				console.error("Failed to fetch payments:", error);
@@ -31,6 +32,16 @@ const Payments = () => {
 
 		fetchTasks();
 	}, []);
+
+	const handleMarkComplete = (taskId: number) => {
+		const updatedTasks = tasks.map((task) => {
+			if (task.id === taskId) {
+				return { ...task, completed: true };
+			}
+			return task;
+		});
+		setPayments(updatedTasks);
+	};
 
 	return (
 		<SafeAreaView className="flex-1 bg-blue-500">
@@ -52,11 +63,16 @@ const Payments = () => {
 						<View className="p-4 border-b border-gray-200">
 							<Text className="text-lg">{item.name}</Text>
 							<Text>{item.description}</Text>
-							<Text className="text-sm text-gray-500">Assigned To: {item.assigned_to_id}</Text>
+							<Text className="text-sm text-gray-500">Assigned To: {item.assigned_to}</Text>
 							<Text className="text-sm text-gray-500">Due: {item.due_date}</Text>
 							<Text className="text-sm text-gray-500">Completed: {item.completed}</Text>
-							<TouchableOpacity className="bg-green-500 mt-2 px-3 py-2 rounded">
-								<Text className="text-white">Pay Now</Text>
+
+							<TouchableOpacity
+								className={`mt-2 px-3 py-2 rounded ${
+									item.completed ? "bg-green-500" : "bg-red-500"
+								}`}
+								onPress={() => handleMarkComplete(item.id)}>
+								<Text className="text-white">{item.completed ? "Completed" : "Mark Complete"}</Text>
 							</TouchableOpacity>
 						</View>
 					)}

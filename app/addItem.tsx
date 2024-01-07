@@ -5,8 +5,7 @@ import { Link } from "expo-router";
 const AddItem = () => {
 	return (
 		<SafeAreaView className="flex-1 flex items-center justify-center space-y-8">
-			<Text className="text-xl">
-				{" "}
+			<Text className="text-xl text-center justify-center">
 				Generic Page to handle adding an item. Functionality not implemented yet
 			</Text>
 			<Link className="text-center bg-violet-400 text-md p-4 rounded" href="/" asChild>
