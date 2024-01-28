@@ -1,3 +1,7 @@
+# Project Information
+
+For information about this project, checkout the devpost at https://devpost.com/software/roommate-app
+
 # Chai Stack ☕
 
 This is an opinionated react-native stack with Typescript, Expo Router, Tailwind(Nativewind) & Zustand
