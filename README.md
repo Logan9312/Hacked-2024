@@ -1,11 +1,10 @@
 # Roommates App Hackathon Project
-
 For full information about this project, checkout the devpost at https://devpost.com/software/roommate-app
 
 # App Info
 - Simple React Native app created to help roomates manage living together, and reduce issues with coordinating turns for household duties.
 - I used the Chai stack for this project, which helped me avoid dependency hell trying to setup the project: https://github.com/AviAvinav/chai.
-
+- The backend for the app was developed using Go and can be found here: https://github.com/Logan9312/Hacked-2024-Backend
 # Features
 - Create payment intents and invoice each other for rent payments, or other charges like grocery bills.
 - Create tasks for other roomates to do, assigned to any roomate. (Ex: Clean dishes)
