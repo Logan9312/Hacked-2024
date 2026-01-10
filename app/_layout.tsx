@@ -1,3 +1,4 @@
+import "../global.css";
 import LoadingScreen from "@components/loadingscreen";
 import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
