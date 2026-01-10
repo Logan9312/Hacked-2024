@@ -1,8 +1,19 @@
 {
   "expo": {
+    "name": "Hacked-2024",
+    "slug": "hacked-2024",
     "scheme": "myapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "web": {
       "bundler": "metro"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

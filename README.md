@@ -5,11 +5,57 @@ For full information about this project, checkout the devpost at https://devpost
 - Simple React Native app created to help roomates manage living together, and reduce issues with coordinating turns for household duties.
 - I used the Chai stack for this project, which helped me avoid dependency hell trying to setup the project: https://github.com/AviAvinav/chai.
 - The backend for the app was developed using Go and can be found here: https://github.com/Logan9312/Hacked-2024-Backend
+
 # Features
 - Create payment intents and invoice each other for rent payments, or other charges like grocery bills.
 - Create tasks for other roomates to do, assigned to any roomate. (Ex: Clean dishes)
 - Track multiple grocery lists.
 - Post messages within households.
+
+# Running the Project
+
+## Prerequisites
+- Node.js (16-18 recommended for Expo SDK 48 compatibility)
+- Bun (package manager) or npm/yarn
+- Expo Go app on your mobile device (for iOS/Android) or a web browser
+
+## Setup & Installation
+
+1. Install dependencies:
+```bash
+bun install
+# or
+npm install
+```
+
+2. Start the Expo development server:
+```bash
+bun start
+# or
+npm start
+# or use npx/bunx directly
+npx expo start
+```
+
+3. Run on specific platforms:
+```bash
+# iOS Simulator (Mac only)
+bun run ios
+# or npm run ios
+
+# Android Emulator
+bun run android
+# or npm run android
+
+# Web browser
+bun run web
+# or npm run web
+```
+
+## Notes
+- The app uses Expo SDK 48 (from 2022). If you encounter compatibility issues with newer Node.js versions, consider using Node.js 16-18.
+- The backend API is currently hardcoded to: `https://hacked-2024-backend-production.up.railway.app`
+- If the backend is no longer available, you'll need to update the API endpoints in the app files or set up the backend from the repository mentioned above.
 
 # Showcase
 ![image](https://github.com/user-attachments/assets/7aefdbe6-de35-42e2-8c8f-842e3b5acb5c)
