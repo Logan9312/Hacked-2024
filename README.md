@@ -15,7 +15,7 @@ For full information about this project, checkout the devpost at https://devpost
 # Running the Project
 
 ## Prerequisites
-- Node.js (16-18 recommended for Expo SDK 48 compatibility)
+- Node.js 22 LTS
 - Bun (package manager) or npm/yarn
 - Expo Go app on your mobile device (for iOS/Android) or a web browser
 
@@ -53,7 +53,7 @@ bun run web
 ```
 
 ## Notes
-- The app uses Expo SDK 48 (from 2022). If you encounter compatibility issues with newer Node.js versions, consider using Node.js 16-18.
+- The app uses Expo SDK 54 and React Native 0.81.
 - The backend API is currently hardcoded to: `https://hacked-2024-backend-production.up.railway.app`
 - If the backend is no longer available, you'll need to update the API endpoints in the app files or set up the backend from the repository mentioned above.
 
